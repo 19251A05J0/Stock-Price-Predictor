@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home page</title>
+	<style>
+		body{
+			font-family: Georgia;
+			background-color:#f2f6ff
+		}
+		.menu{
+			padding:12px;
+			font-size: large;
+			font-weight:bold;
+			color: Black;
+			}
+
+		header{
+			
+			position: fixed; 
+        }
+        a:hover{
+		background-color:white;
+		color:blue;
+	}
+	.navbar{
+		padding:24px ;
+        margin-left: 1150px;
+		width: 1320vw;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+	}
+    .page{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 200px 50px;
+        font-size: 115px;
+        width:100%;
+        background-color: blanchedalmond;
+        position: fixed;
+    }
+    .info{
+        width: 50%;
+        font-size: 25px;
+        margin-left: 50px;
+        margin-right: 150px;
+
+        
+    }
+    .img{
+        width:30%;
+    }
+    </style>
+</head>
+<body>
+	<!-- other html elements -->
+	<header class ="nav">
+	<div class="navbar">
+		<a href="{{ url_for('index')}}"><span class="menu">Home</span></a>
+		<a href="{{ url_for('pre')}}"><span class="menu">Predict</span></a>
+        <a href="https://www.linkedin.com/in/vaishnavi-yada/"><span class="menu">LinkedIn</span></a>
+        <a href="https://github.com/19251A05J0"><span class="menu">Github</span></a>
+
+	</div>
+    </header>
+	<div class="page">
+		<p class="info">Stock market prediction is the act of trying to determine the future value of a company stock or other financial instrument traded on an exchange.
+            The successful prediction of a stock's future price could yield significant profit.
+            The efficient-market hypothesis suggests that stock prices reflect all currently available information and any price 
+            changes that are not based on newly revealed information thus are inherently unpredictable.
+            Others disagree and those with this viewpoint possess myriad methods and technologies which purportedly 
+            allow them to gain future price information.</p>
+        <img  class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaBVZZHkffd0Swc4TzcYDXf_GIqC0jVJfIvA&usqp=CAU" alt="Stock"/>
+      
+    </div>
+  
+
+
+</body>
+	
+</html>

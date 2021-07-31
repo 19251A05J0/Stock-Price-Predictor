@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: aliceblue;
+
+        }
+        .form
+        {
+            margin: 50px 50px;
+            color: black;
+            font-weight: 1000px;
+        }
+        .center {
+            margin: 150px 500px;
+            width: 30%;
+            border: 3px solid rgb(51, 51, 160);
+            padding: 50px 50px;
+            background-image: url("https://img.etimg.com/thumb/msid-83829425,width-300,resizemode-4/markets/stocks/news/stocks-in-focus-midhani-lic-housing-ptc-india-and-more.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .form-input{
+            margin-left: 5px;
+        }
+        .navbar{
+		padding:24px ; margin-left: 1150px;
+		width: 1320vw;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+	}
+    .menu{
+			padding:12px;
+			font-size: large;
+			font-weight:bold;
+			color: Black;
+			}
+            body{
+			font-family: Georgia;
+			background-color:#f2f6ff
+		}
+        .row{
+            color: wheat;  
+            background-color: rgb(18 98 196 / 55%); 
+            text-align: center;  
+            width: 310px;
+            height: 65px;       
+        }
+        
+    </style>
+</head>
+<body>
+    <header class ="nav">
+        <div class="navbar">
+            <a href="{{ url_for('index')}}"><span class="menu">Home</span></a>
+            <a href="{{ url_for('pre')}}"><span class="menu">Predict</span></a>
+            <a href="https://www.linkedin.com/in/vaishnavi-yada/"><span class="menu">LinkedIn</span></a>
+            <a href="https://github.com/19251A05J0"><span class="menu">Github</span></a>
+        </div>
+        </header>
+    
+
+    <div class="center">  
+    <div class="login ">
+        <h1 style="align-items: center;">Stock Price Prediction </h1>
+    <form class="form" action="/predict" method="POST">
+        <b><span>Open      </span><input class="form-input" type = "text" name = "Open" ><br><br>
+        <span>High   </span><input class="form-input" type = "text" name = "High" ><br><br>
+        <span>Low      </span><input class="form-input" type = "text" name = "Low" ><br><br>
+        <span>Volume </span><input class="form-input" type = "text" name = "Volume"><br><br> </b>
+        <button style="text-align: center;" class="btn btn-success">Predict</button>
+    </form>
+    <div class = "row">
+        {% if prediction %}
+        <h2 class = "text-warning">Predicted Price of Silver: {{prediction}}</h2>
+        {% endif %}
+    </div>
+    </div>
+    </div>
+    
+</body>
+</html>
